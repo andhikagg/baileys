@@ -50,7 +50,7 @@
     "p-queue": "^9.3.0",
     "pino": "^10.3.1",
     "protobufjs": "^7.6.1",
-    "whatsapp-rust-bridge-baron": "file:../whatsapp-rust-bridge-baron",
+    "whatsapp-rust-bridge-baron": "github:andhikagg/whatsapp-rust-bridge",
     "ws": "^8.21.0"
   },
   "devDependencies": {
