@@ -1,0 +1,102 @@
+{
+  "name": "baron-baileys-v2",
+  "version": "1.5.8",
+  "description": "A high-performance WhatsApp Web library with Rust WASM acceleration",
+  "keywords": [
+    "whatsapp",
+    "whatsapp-web",
+    "whatsapp-api",
+    "baileys",
+    "multi-device",
+    "wasm",
+    "rust",
+    "automation",
+    "md"
+  ],
+  "homepage": "https://github.com/7ucg/baron-baileys-v2",
+  "repository": {
+    "url": "git+https://github.com/7ucg/baron-baileys-v2.git"
+  },
+  "license": "MIT",
+  "author": "Baron",
+  "main": "src/index.js",
+  "files": [
+    "src/**/*",
+    "WAProto/**/*",
+    "engine-requirements.js",
+    "documentation/**/*"
+  ],
+  "scripts": {
+    "ncu": "npm-check-updates",
+    "format": "prettier --write \"src/**/*.{js,json,md}\"",
+    "lint": "tsc && eslint src --ext .js",
+    "lint:fix": "npm run format && npm run lint -- --fix",
+    "test": "jest --runInBand",
+    "bench": "node benchmarks/antiban.bench.js",
+    "bench:wabinary": "node benchmarks/wabinary.bench.js",
+    "preinstall": "node ./engine-requirements.js"
+  },
+  "dependencies": {
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "@cacheable/node-cache": "^3.0.1",
+    "@hapi/boom": "^10.0.1",
+    "async-mutex": "^0.5.0",
+    "cache-manager": "^7.2.8",
+    "libphonenumber-js": "^1.13.3",
+    "lru-cache": "^11.5.0",
+    "music-metadata": "^11.12.3",
+    "p-queue": "^9.3.0",
+    "pino": "^10.3.1",
+    "protobufjs": "^7.6.1",
+    "whatsapp-rust-bridge-baron": "github:andhikagg/whatsapp-rust-bridge",
+    "ws": "^8.21.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.31.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.0.0",
+    "@types/ws": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.4",
+    "@typescript-eslint/parser": "^8.59.4",
+    "@whiskeysockets/eslint-config": "^1.0.0",
+    "eslint": "^9",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.4.1",
+    "jest": "^30.0.5",
+    "jimp": "^1.6.0",
+    "jiti": "^2.4.2",
+    "json": "^11.0.0",
+    "link-preview-js": "^3.2.0",
+    "pino-pretty": "^13.1.1",
+    "prettier": "^3.5.3",
+    "protobufjs-cli": "^1.3.1",
+    "qrcode-terminal": "^0.12.0",
+    "ts-jest": "^29.4.11",
+    "tsx": "^4.22.3"
+  },
+  "peerDependencies": {
+    "audio-decode": "^2.1.3",
+    "jimp": "^1.6.0",
+    "link-preview-js": "^3.2.0",
+    "sharp": "^0.32.5"
+  },
+  "peerDependenciesMeta": {
+    "audio-decode": {
+      "optional": true
+    },
+    "jimp": {
+      "optional": true
+    },
+    "link-preview-js": {
+      "optional": true
+    },
+    "sharp": {
+      "optional": true
+    }
+  },
+  "packageManager": "yarn@4.9.2",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
