@@ -135,9 +135,9 @@ See [MEX.md](documentation/MEX.md) for full documentation.
 ## Installation
 
 ```bash
-npm install github:itsliaa/baileys
+npm install github:andhikagg/baileys
 # or
-yarn add github:itsliaa/baileys
+yarn add github:andhikagg/baileys
 ```
 
 **Requirements:** Node.js ≥ 20
