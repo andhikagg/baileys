@@ -1358,6 +1358,8 @@ const makeMessagesRecvSocket = config => {
 		const [child] = (0, WABinary_1.getAllBinaryNodeChildren)(node)
 		const nodeType = node.attrs.type
 		const from = (0, WABinary_1.jidNormalizedUser)(node.attrs.from)
+		ev.emit('node.notification', { type: nodeType, node, child })
+		
 		switch (nodeType) {
 			case 'newsletter':
 				await handleNewsletterNotification(node)
@@ -2402,6 +2404,7 @@ const makeMessagesRecvSocket = config => {
 					logger,
 					groupDataForNormalization
 				)
+				ev.emit('node.messages', { node, msg, messages: [msg], type: 'notify' })
 				await upsertMessage(msg, 'notify')
 			})
 		} catch (error) {
