@@ -1,7 +1,7 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
 exports.SenderKeyMessage = void 0
-const rb = require('whatsapp-rust-bridge-baron')
+const rb = require('whatsapp-rust-bridge')
 const index_js_1 = require('../../../WAProto/index.js')
 const ciphertext_message_1 = require('./ciphertext-message')
 class SenderKeyMessage extends ciphertext_message_1.CiphertextMessage {

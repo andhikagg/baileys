@@ -56,7 +56,7 @@ const util_1 = require('util')
 const zlib_1 = require('zlib')
 const constants = __importStar(require('./constants'))
 const jid_utils_1 = require('./jid-utils')
-const rb = require('whatsapp-rust-bridge-baron')
+const rb = require('whatsapp-rust-bridge')
 const inflatePromise = (0, util_1.promisify)(zlib_1.inflate)
 const decompressingIfRequired = async buffer => {
 	if (2 & buffer.readUInt8()) {

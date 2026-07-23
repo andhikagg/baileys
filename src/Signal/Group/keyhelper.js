@@ -55,7 +55,7 @@ exports.generateSenderKey = generateSenderKey
 exports.generateSenderKeyId = generateSenderKeyId
 exports.generateSenderSigningKey = generateSenderSigningKey
 const nodeCrypto = __importStar(require('crypto'))
-const rb = require('whatsapp-rust-bridge-baron')
+const rb = require('whatsapp-rust-bridge')
 function generateSenderKey() {
 	return nodeCrypto.randomBytes(32)
 }

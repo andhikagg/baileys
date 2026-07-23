@@ -1,7 +1,7 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
 exports.SenderChainKey = void 0
-const rb = require('whatsapp-rust-bridge-baron')
+const rb = require('whatsapp-rust-bridge')
 const sender_message_key_1 = require('./sender-message-key')
 class SenderChainKey {
 	constructor(iteration, chainKey) {

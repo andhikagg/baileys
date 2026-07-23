@@ -7,7 +7,7 @@ exports.encodeSignedDeviceIdentity =
 		void 0
 const boom_1 = require('@hapi/boom')
 const crypto_1 = require('crypto')
-const rb = require('whatsapp-rust-bridge-baron')
+const rb = require('whatsapp-rust-bridge')
 const index_js_1 = require('../../WAProto/index.js')
 const Defaults_1 = require('../Defaults')
 const WABinary_1 = require('../WABinary')

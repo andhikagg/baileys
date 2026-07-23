@@ -52,7 +52,7 @@ var __importStar =
 	})()
 Object.defineProperty(exports, '__esModule', { value: true })
 exports.makeLibSignalRepository = makeLibSignalRepository
-const rb = require('whatsapp-rust-bridge-baron')
+const rb = require('whatsapp-rust-bridge')
 const lru_cache_1 = require('lru-cache')
 const Utils_1 = require('../Utils')
 const WABinary_1 = require('../WABinary')

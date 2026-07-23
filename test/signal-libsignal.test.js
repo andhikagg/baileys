@@ -4,7 +4,7 @@
 // Uses the SessionCipher spy in test/__mocks__/whatsapp-rust-bridge-baron.js to inspect
 // what signalStorage passes back to the Rust bridge without needing a real Signal session.
 
-const rb = require('whatsapp-rust-bridge-baron')
+const rb = require('whatsapp-rust-bridge')
 const { makeLibSignalRepository } = require('../src/Signal/libsignal')
 
 // ── helpers ───────────────────────────────────────────────────────────────────

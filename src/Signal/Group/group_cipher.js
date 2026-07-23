@@ -1,7 +1,7 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
 exports.GroupCipher = void 0
-const rb = require('whatsapp-rust-bridge-baron')
+const rb = require('whatsapp-rust-bridge')
 const sender_key_message_1 = require('./sender-key-message')
 class GroupCipher {
 	constructor(senderKeyStore, senderKeyName) {

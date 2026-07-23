@@ -20,7 +20,7 @@ exports.sha256 = sha256
 exports.derivePairingCodeKey = derivePairingCodeKey
 const { subtle } = globalThis.crypto
 const Defaults_1 = require('../Defaults')
-const rb = require('whatsapp-rust-bridge-baron')
+const rb = require('whatsapp-rust-bridge')
 
 // ── Re-exports from Rust ─────────────────────────────────────────────────────
 Object.defineProperty(exports, 'md5', { enumerable: true, get: () => rb.md5 })

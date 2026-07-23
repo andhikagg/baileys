@@ -1,7 +1,7 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
 exports.SenderMessageKey = void 0
-const rb = require('whatsapp-rust-bridge-baron')
+const rb = require('whatsapp-rust-bridge')
 class SenderMessageKey {
 	constructor(iteration, seed) {
 		// HKDF(seed, 96, salt=0x00*32, info='WhisperGroup') → split into 3×32 byte chunks

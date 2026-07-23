@@ -13,7 +13,7 @@ exports.processSyncAction =
 	exports.newLTHashState =
 		void 0
 const boom_1 = require('@hapi/boom')
-const whatsapp_rust_bridge_1 = require('whatsapp-rust-bridge-baron')
+const whatsapp_rust_bridge_1 = require('whatsapp-rust-bridge')
 const index_js_1 = require('../../WAProto/index.js')
 const LabelAssociation_1 = require('../Types/LabelAssociation')
 const WABinary_1 = require('../WABinary')

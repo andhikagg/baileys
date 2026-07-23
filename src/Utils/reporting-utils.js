@@ -1,7 +1,7 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
 exports.getMessageReportingToken = exports.shouldIncludeReportingToken = void 0
-const rb = require('whatsapp-rust-bridge-baron')
+const rb = require('whatsapp-rust-bridge')
 const crypto_2 = require('./crypto')
 const reportingFields = [
 	{ f: 1 },

@@ -4,7 +4,7 @@ exports.makeNoiseHandler = void 0
 const boom_1 = require('@hapi/boom')
 const index_js_1 = require('../../WAProto/index.js')
 const Defaults_1 = require('../Defaults')
-const rb = require('whatsapp-rust-bridge-baron')
+const rb = require('whatsapp-rust-bridge')
 
 // rustNodeToJs mirrors the one in decode.js — converts InternalBinaryNode to plain JS object
 const rustNodeToJs = node => {

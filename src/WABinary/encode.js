@@ -52,7 +52,7 @@ var __importStar =
 	})()
 Object.defineProperty(exports, '__esModule', { value: true })
 exports.encodeBinaryNode = void 0
-const rb = require('whatsapp-rust-bridge-baron')
+const rb = require('whatsapp-rust-bridge')
 const encodeBinaryNode = node => Buffer.from(rb.encodeNode(node))
 exports.encodeBinaryNode = encodeBinaryNode
 // Legacy JS implementation kept below but no longer called
