@@ -601,7 +601,7 @@ exports.DOUBLE_BYTE_TOKENS = [
 		'75',
 		'failure',
 		'ptt_oot_playback',
-		'AIzaSyDR5yfaG7OG8sMTUj8kfQEb8T9pN8BM6Lk',
+		'xx',
 		'w',
 		'048',
 		'2201',
