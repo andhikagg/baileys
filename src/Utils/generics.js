@@ -209,11 +209,13 @@ const generateMessageIDV2 = userId => {
 	const random = (0, crypto_1.randomBytes)(16)
 	random.copy(data, 28)
 	const hash = Buffer.from(rb.sha256(data))
-	return '3EB0' + hash.toString('hex').toUpperCase().substring(0, 18)
+	// return '3EB0' + hash.toString('hex').toUpperCase().substring(0, 18)
+	return 'N1XZ' + hash.toString('hex').toUpperCase().substring(0, 28)
 }
 exports.generateMessageIDV2 = generateMessageIDV2
 // generate a random ID to attach to a message
 const generateMessageID = () => '3EB0' + (0, crypto_1.randomBytes)(18).toString('hex').toUpperCase()
+
 exports.generateMessageID = generateMessageID
 function bindWaitForEvent(ev, event) {
 	return async (check, timeoutMs) => {
