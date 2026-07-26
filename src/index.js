@@ -43,3 +43,4 @@ __exportStar(require('./WAM/index'), exports)
 __exportStar(require('./WAUSync/index'), exports)
 __exportStar(require('./Store/index'), exports)
 exports.default = index_1.default
+
