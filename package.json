@@ -1,5 +1,5 @@
 {
-  "name": "baileys-merged",
+  "name": "baileys",
   "version": "1.0.0",
   "description": "Merged Baileys — baron-baileys-v2 base with itsliaaa features (newsletter media, interactive, albums, rich responses, single/sqlite auth state)",
   "keywords": [
@@ -15,9 +15,9 @@
     "interactive-messages",
     "bot"
   ],
-  "homepage": "https://github.com/7ucg/baron-baileys-v2",
+  "homepage": "https://github.com/andhikagg/baileys",
   "repository": {
-    "url": "git+https://github.com/7ucg/baron-baileys-v2.git"
+    "url": "git+https://github.com/andhikagg/baileys.git"
   },
   "license": "MIT",
   "author": "Baron & Lia Wynn",
