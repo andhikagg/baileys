@@ -1,11 +1,11 @@
 'use strict'
 
-const { USyncBotProfileProtocol } = require('../src/WAUSync/Protocols/USyncBotProfileProtocol')
-const { USyncBusinessProtocol } = require('../src/WAUSync/Protocols/USyncBusinessProtocol')
-const { USyncContactProtocol } = require('../src/WAUSync/Protocols/USyncContactProtocol')
-const { USyncDisappearingModeProtocol } = require('../src/WAUSync/Protocols/USyncDisappearingModeProtocol')
-const { USyncSidelistProtocol } = require('../src/WAUSync/Protocols/USyncSidelistProtocol')
-const { USyncTextStatusProtocol } = require('../src/WAUSync/Protocols/USyncTextStatusProtocol')
+const { USyncBotProfileProtocol } = require('../lib/WAUSync/Protocols/USyncBotProfileProtocol')
+const { USyncBusinessProtocol } = require('../lib/WAUSync/Protocols/USyncBusinessProtocol')
+const { USyncContactProtocol } = require('../lib/WAUSync/Protocols/USyncContactProtocol')
+const { USyncDisappearingModeProtocol } = require('../lib/WAUSync/Protocols/USyncDisappearingModeProtocol')
+const { USyncSidelistProtocol } = require('../lib/WAUSync/Protocols/USyncSidelistProtocol')
+const { USyncTextStatusProtocol } = require('../lib/WAUSync/Protocols/USyncTextStatusProtocol')
 
 // helper: build a minimal binary node
 const node = (tag, attrs = {}, content = undefined) => ({ tag, attrs, content })

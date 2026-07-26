@@ -1,4 +1,4 @@
-# Managed Accounts, Payments Passkey & IPLS (`src/Socket/managed-account.js`)
+# Managed Accounts, Payments Passkey & IPLS (`lib/Socket/managed-account.js`)
 
 Covers MEX operations for parental controls, payments passkey (WebAuthn), UPI onboarding, and IPLS.
 

@@ -10,23 +10,23 @@ All of these are used by baron-baileys-v2 internally.
 
 | API                                                                                   | Used in                                                        |
 | ------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| `aesEncrypt/Decrypt` (CBC, GCM, CTR, +IV variants)                                    | `src/Utils/crypto.js`                                          |
-| `hmacSign`, `sha256`, `md5`, `hkdf`                                                   | `src/Utils/crypto.js`                                          |
-| `calculateAgreement`, `calculateSignature`, `verifySignature`                         | `src/Utils/crypto.js`                                          |
-| `generateKeyPair`, `generatePreKey`, `generateSignedPreKey`, `generateRegistrationId` | `src/Utils/crypto.js`, `src/Utils/validate-connection.js`      |
+| `aesEncrypt/Decrypt` (CBC, GCM, CTR, +IV variants)                                    | `lib/Utils/crypto.js`                                          |
+| `hmacSign`, `sha256`, `md5`, `hkdf`                                                   | `lib/Utils/crypto.js`                                          |
+| `calculateAgreement`, `calculateSignature`, `verifySignature`                         | `lib/Utils/crypto.js`                                          |
+| `generateKeyPair`, `generatePreKey`, `generateSignedPreKey`, `generateRegistrationId` | `lib/Utils/crypto.js`, `lib/Utils/validate-connection.js`      |
 | `_serializeIdentityKeyPair`                                                           | signal stack                                                   |
-| `encodeNode`, `decodeNode`                                                            | `src/WABinary/encode.js`, `decode.js`                          |
-| `expandAppStateKeys`                                                                  | `src/Utils/chat-utils.js`                                      |
+| `encodeNode`, `decodeNode`                                                            | `lib/WABinary/encode.js`, `decode.js`                          |
+| `expandAppStateKeys`                                                                  | `lib/Utils/chat-utils.js`                                      |
 | `generateContentMac`, `generateIndexMac`, `generatePatchMac`, `generateSnapshotMac`   | (available but currently implemented in JS in `chat-utils.js`) |
-| `LTHashState`, `LTHashAntiTampering`                                                  | `src/Utils/lt-hash.js`                                         |
-| `NoiseSession` (Noise XX)                                                             | `src/Utils/noise-handler.js`                                   |
-| `NoiseXxFallbackSession`                                                              | `src/Utils/noise-handler.js`                                   |
-| `SessionBuilder`, `SessionCipher`, `SessionRecord`                                    | `src/Signal/libsignal.js`                                      |
-| `GroupCipher`, `GroupSessionBuilder`                                                  | `src/Signal/Group/`                                            |
-| `SenderKeyDistributionMessage`, `SenderKeyName`, `SenderKeyRecord`                    | `src/Signal/Group/`                                            |
-| `ProtocolAddress`                                                                     | `src/Signal/libsignal.js`                                      |
-| `getPreKeyMessageIdentityKey`                                                         | `src/Signal/libsignal.js`                                      |
-| `getEnabledFeatures`                                                                  | `src/Utils/crypto.js` (re-exported)                            |
+| `LTHashState`, `LTHashAntiTampering`                                                  | `lib/Utils/lt-hash.js`                                         |
+| `NoiseSession` (Noise XX)                                                             | `lib/Utils/noise-handler.js`                                   |
+| `NoiseXxFallbackSession`                                                              | `lib/Utils/noise-handler.js`                                   |
+| `SessionBuilder`, `SessionCipher`, `SessionRecord`                                    | `lib/Signal/libsignal.js`                                      |
+| `GroupCipher`, `GroupSessionBuilder`                                                  | `lib/Signal/Group/`                                            |
+| `SenderKeyDistributionMessage`, `SenderKeyName`, `SenderKeyRecord`                    | `lib/Signal/Group/`                                            |
+| `ProtocolAddress`                                                                     | `lib/Signal/libsignal.js`                                      |
+| `getPreKeyMessageIdentityKey`                                                         | `lib/Signal/libsignal.js`                                      |
+| `getEnabledFeatures`                                                                  | `lib/Utils/crypto.js` (re-exported)                            |
 
 ---
 
@@ -133,10 +133,10 @@ const keyIds = rb.collectAppStateKeyIds(snapshotBytes, patchesBytes)
 
 ### 5. JID utilities (already in JS — low priority)
 
-The bridge exports `parseJid`, `encodeJid`, `jidNormalizedUser`, `isGroupJid`, `isUserJid`, `isNewsletterJid`, `isLidJid`, `isMessengerJid`, `isBotJid`, etc. — all already implemented in `src/WABinary/jid-utils.js` as fast string operations. WASM FFI overhead makes replacing them a net loss for most call sites.
+The bridge exports `parseJid`, `encodeJid`, `jidNormalizedUser`, `isGroupJid`, `isUserJid`, `isNewsletterJid`, `isLidJid`, `isMessengerJid`, `isBotJid`, etc. — all already implemented in `lib/WABinary/jid-utils.js` as fast string operations. WASM FFI overhead makes replacing them a net loss for most call sites.
 
 ---
 
 ## `getWAConnHeader` — do not use
 
-The bridge exports `getWAConnHeader()` which returns the 4-byte WA connection header `[87, 65, proto_version, dict_version]`. The current hardcoded value in `src/Defaults/index.js` (`NOISE_WA_HEADER`) bakes in the correct `DICT_VERSION` for this library's token table. Using the bridge's version risks a version mismatch if the embedded dict version differs. Leave as-is.
+The bridge exports `getWAConnHeader()` which returns the 4-byte WA connection header `[87, 65, proto_version, dict_version]`. The current hardcoded value in `lib/Defaults/index.js` (`NOISE_WA_HEADER`) bakes in the correct `DICT_VERSION` for this library's token table. Using the bridge's version risks a version mismatch if the embedded dict version differs. Leave as-is.

@@ -1,6 +1,6 @@
 'use strict'
 
-const { makeOrderedDictionary } = require('../src/Store/make-ordered-dictionary')
+const { makeOrderedDictionary } = require('../lib/Store/make-ordered-dictionary')
 
 const makeDict = () => makeOrderedDictionary(item => item.id)
 

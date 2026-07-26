@@ -16,7 +16,7 @@ const {
 	PostReconnectThrottle,
 	buildContentSignature,
 	wrapSocket
-} = require('../src/antiban')
+} = require('../lib/antiban')
 
 // ── resolveConfig ─────────────────────────────────────────────────────────────
 

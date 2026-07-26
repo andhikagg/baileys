@@ -137,7 +137,7 @@ sock.ev.on('connection.update', ({ connection }) => {
 Import and use the guards individually or via `wrapSocket`:
 
 ```js
-const { wrapSocket, AntiBan, RateLimiter, WarmUp } = require('baron-baileys-v2/src/antiban')
+const { wrapSocket, AntiBan, RateLimiter, WarmUp } = require('baron-baileys-v2/lib/antiban')
 
 // Wrap an existing Baileys socket
 const wrapped = wrapSocket(sock, 'moderate')
@@ -192,7 +192,7 @@ deprecated (see below), because those two are pure duplicates of flat fields tha
 | **JID Canonicalizer / LID Resolver** | `jidCanonicalizer` / `lidResolver` | `enabled: false` | Learns LID↔PN mappings from traffic and canonicalizes outbound sends, so the same contact isn't tracked as two different rate-limit identities. |
 | **Session Stability Monitor** | `sessionStability` | `enabled: false` | Watches decrypt failure rate (Bad MAC) and flags session degradation before it becomes a full ban risk. |
 
-Each block's fields are documented in its class's `DEFAULT_CONFIG` in `src/antiban.js` — pass
+Each block's fields are documented in its class's `DEFAULT_CONFIG` in `lib/antiban.js` — pass
 only the fields you want to change; everything else keeps its default.
 
 ### Migrating the old nested `rateLimiter` / `warmUp` shape

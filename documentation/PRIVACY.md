@@ -1,4 +1,4 @@
-# Privacy, Status, Profile & Account (`src/Socket/privacy.js`)
+# Privacy, Status, Profile & Account (`lib/Socket/privacy.js`)
 
 This module covers privacy settings, text status (About), profile pictures, account login/logout, trusted devices, linked social profiles, and misc MEX operations.
 

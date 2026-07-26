@@ -1,10 +1,10 @@
 'use strict'
 
-const { SenderKeyName } = require('../src/Signal/Group/sender-key-name')
-const { SenderChainKey } = require('../src/Signal/Group/sender-chain-key')
-const { SenderKeyState } = require('../src/Signal/Group/sender-key-state')
-const { SenderMessageKey } = require('../src/Signal/Group/sender-message-key')
-const { SenderKeyDistributionMessage } = require('../src/Signal/Group/sender-key-distribution-message')
+const { SenderKeyName } = require('../lib/Signal/Group/sender-key-name')
+const { SenderChainKey } = require('../lib/Signal/Group/sender-chain-key')
+const { SenderKeyState } = require('../lib/Signal/Group/sender-key-state')
+const { SenderMessageKey } = require('../lib/Signal/Group/sender-message-key')
+const { SenderKeyDistributionMessage } = require('../lib/Signal/Group/sender-key-distribution-message')
 
 // ── SenderKeyName ─────────────────────────────────────────────────────────────
 describe('SenderKeyName', () => {

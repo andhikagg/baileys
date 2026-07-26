@@ -1,6 +1,6 @@
 'use strict'
 
-const { buildAckStanza } = require('../src/Utils/stanza-ack')
+const { buildAckStanza } = require('../lib/Utils/stanza-ack')
 
 describe('buildAckStanza', () => {
 	test('basic message node returns ack with class=message', () => {

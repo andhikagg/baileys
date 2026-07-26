@@ -1,6 +1,6 @@
 'use strict'
 const { proto } = require('../WAProto/index.js')
-const { decodeConsumerApplication, consumerApplicationToMessage } = require('../src/Utils/consumer-application')
+const { decodeConsumerApplication, consumerApplicationToMessage } = require('../lib/Utils/consumer-application')
 
 const wrap = contentFields => {
 	const obj = { payload: { content: { ...contentFields } } }

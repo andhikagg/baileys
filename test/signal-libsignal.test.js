@@ -5,7 +5,7 @@
 // what signalStorage passes back to the Rust bridge without needing a real Signal session.
 
 const rb = require('whatsapp-rust-bridge')
-const { makeLibSignalRepository } = require('../src/Signal/libsignal')
+const { makeLibSignalRepository } = require('../lib/Signal/libsignal')
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 
@@ -139,7 +139,7 @@ describe('makeInteropSocket logger availability', () => {
 			generateMessageTag: () => 'tag-1',
 			signalRepository: {}
 		}
-		const { makeInteropSocket } = require('../src/Socket/interop')
+		const { makeInteropSocket } = require('../lib/Socket/interop')
 		const interopSock = makeInteropSocket(mockSock)
 
 		// initInterop is exposed; it will call logger.warn/info internally on errors

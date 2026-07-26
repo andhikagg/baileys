@@ -27,7 +27,7 @@ const {
 	hmacSha256,
 	normalizeJidBatch,
 	BufferJSON
-} = require('../src/Utils/generics')
+} = require('../lib/Utils/generics')
 
 describe('isStringNullOrEmpty', () => {
 	test('null → true', () => expect(isStringNullOrEmpty(null)).toBe(true))

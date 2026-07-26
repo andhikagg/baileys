@@ -1,6 +1,6 @@
 'use strict'
 
-const { decompressingIfRequired, decodeBinaryNode } = require('../src/WABinary/decode')
+const { decompressingIfRequired, decodeBinaryNode } = require('../lib/WABinary/decode')
 const zlib = require('zlib')
 
 describe('decompressingIfRequired', () => {

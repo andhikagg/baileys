@@ -1,6 +1,6 @@
 'use strict'
 const { proto } = require('../WAProto/index.js')
-const { decodeE2eRekeyPayload } = require('../src/Utils/voip-rekey')
+const { decodeE2eRekeyPayload } = require('../lib/Utils/voip-rekey')
 
 describe('decodeE2eRekeyPayload', () => {
 	test('maps all three key types from int enum to name', () => {

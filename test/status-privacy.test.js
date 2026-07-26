@@ -4,7 +4,7 @@
 // These functions build/parse IQ stanzas with xmlns="status" — we test the
 // stanza shape and the response parser without a real WS connection.
 
-const { S_WHATSAPP_NET } = require('../src/WABinary')
+const { S_WHATSAPP_NET } = require('../lib/WABinary')
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 

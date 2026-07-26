@@ -1,7 +1,7 @@
 'use strict'
 
-const { BinaryInfo } = require('../src/WAM/BinaryInfo')
-const { encodeWAM } = require('../src/WAM/encode')
+const { BinaryInfo } = require('../lib/WAM/BinaryInfo')
+const { encodeWAM } = require('../lib/WAM/encode')
 
 describe('BinaryInfo', () => {
 	test('default values', () => {

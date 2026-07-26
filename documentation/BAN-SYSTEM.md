@@ -372,7 +372,7 @@ From the violation types and enforcement code, these behaviors are linked to enf
 
 ## How baron-baileys-v2 Handles Enforcement
 
-The library's anti-ban system (`src/Socket/antiban.js`) includes:
+The library's anti-ban system (`lib/Socket/antiban.js`) includes:
 
 - Rate limiting between messages
 - Random delays to simulate human typing speed

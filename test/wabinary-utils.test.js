@@ -9,7 +9,7 @@ const {
 	getBinaryNodeChildUInt,
 	assertNodeErrorFree,
 	reduceBinaryNodeToDictionary,
-} = require('../src/WABinary/generic-utils')
+} = require('../lib/WABinary/generic-utils')
 
 // Minimal node builder helpers
 const node = (tag, attrs = {}, ...content) => ({ tag, attrs, content: content.length ? content : undefined })

@@ -397,7 +397,7 @@ sock.ev.on('messages.update', async updates => {
 
 ## Anti-Ban System
 
-Import from `baileys/src/antiban.js`:
+Import from `baileys/lib/antiban.js`:
 
 ```js
 const {
@@ -416,7 +416,7 @@ const {
 	MessageQueue,
 	Scheduler,
 	wrapSocket
-} = require('baileys/src/antiban')
+} = require('baileys/lib/antiban')
 ```
 
 ### RateLimiter — throttle outbound messages
@@ -502,7 +502,7 @@ await sock.sendMessage(jid, { text })
 ### wrapSocket — apply all anti-ban layers at once
 
 ```js
-const { wrapSocket } = require('baileys/src/antiban')
+const { wrapSocket } = require('baileys/lib/antiban')
 
 // 'moderate' is the default — use 'conservative' or 'aggressive' to tune
 const wrappedSock = wrapSocket(sock, 'moderate')

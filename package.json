@@ -21,17 +21,17 @@
   },
   "license": "MIT",
   "author": "Baron & Lia Wynn",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "files": [
-    "src/**/*",
+    "lib/**/*",
     "WAProto/**/*",
     "engine-requirements.js",
     "documentation/**/*"
   ],
   "scripts": {
     "ncu": "npm-check-updates",
-    "format": "prettier --write \"src/**/*.{js,json,md}\"",
-    "lint": "tsc && eslint src --ext .js",
+    "format": "prettier --write \"lib/**/*.{js,json,md}\"",
+    "lint": "tsc && eslint lib --ext .js",
     "lint:fix": "npm run format && npm run lint -- --fix",
     "test": "jest --runInBand",
     "bench": "node benchmarks/antiban.bench.js",

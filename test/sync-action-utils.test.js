@@ -1,6 +1,6 @@
 'use strict'
 
-const { processContactAction, emitSyncActionResults } = require('../src/Utils/sync-action-utils')
+const { processContactAction, emitSyncActionResults } = require('../lib/Utils/sync-action-utils')
 
 const noopLogger = { warn: () => {} }
 

@@ -1,6 +1,6 @@
 'use strict'
 
-const { Browsers, getPlatformId } = require('../src/Utils/browser-utils')
+const { Browsers, getPlatformId } = require('../lib/Utils/browser-utils')
 
 describe('Browsers', () => {
 	test('ubuntu returns ["Ubuntu", browser, version]', () => {

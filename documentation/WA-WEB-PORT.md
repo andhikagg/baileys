@@ -17,8 +17,8 @@ Query which features a device supports (`document`, `encrypt*`, `voip`,
 `multi_agent`, …) via the standard USync mechanism.
 
 ```js
-const { USyncQuery, USyncUser } = require('baron-baileys-v2/src/WAUSync')
-const { USyncFeatureProtocol } = require('baron-baileys-v2/src/WAUSync/Protocols/USyncFeatureProtocol')
+const { USyncQuery, USyncUser } = require('baron-baileys-v2/lib/WAUSync')
+const { USyncFeatureProtocol } = require('baron-baileys-v2/lib/WAUSync/Protocols/USyncFeatureProtocol')
 
 const query = new USyncQuery().withUser(new USyncUser().withId('49123456789@s.whatsapp.net'))
 query.protocols.push(new USyncFeatureProtocol(['encrypt', 'voip'])) // or default = all features

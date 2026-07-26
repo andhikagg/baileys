@@ -1,6 +1,6 @@
 'use strict'
 
-const { ObjectRepository } = require('../src/Store/object-repository')
+const { ObjectRepository } = require('../lib/Store/object-repository')
 
 describe('ObjectRepository', () => {
 	describe('constructor', () => {

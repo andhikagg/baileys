@@ -3,7 +3,7 @@
 // Tests for graphql.js: executeWWWGraphQL, executeFacebookGraphQL,
 // executeWamoGraphQL, parseGraphQLResponse, and the socket methods.
 
-const { executeWWWGraphQL, executeFacebookGraphQL, executeWamoGraphQL } = require('../src/Socket/graphql')
+const { executeWWWGraphQL, executeFacebookGraphQL, executeWamoGraphQL } = require('../lib/Socket/graphql')
 
 // ── mock fetch ────────────────────────────────────────────────────────────────
 
@@ -149,7 +149,7 @@ describe('executeWamoGraphQL', () => {
 // ── WWW_GQL_IDS / WAMO_GQL_IDS presence ──────────────────────────────────────
 
 describe('GQL ID dictionaries', () => {
-	const { makeGraphQLSocket } = require('../src/Socket/graphql')
+	const { makeGraphQLSocket } = require('../lib/Socket/graphql')
 
 	// makeGraphQLSocket expects a sock with wwwGetNonce/wwwExchangeNonce
 	const mockSock = {

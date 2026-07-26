@@ -1,4 +1,4 @@
-# USync — Bulk User Data Query Protocol (`src/WAUSync/`)
+# USync — Bulk User Data Query Protocol (`lib/WAUSync/`)
 
 USync is WhatsApp's internal binary IQ protocol for batch-querying user data. One request can fetch multiple data types for multiple users simultaneously.
 
@@ -18,7 +18,7 @@ The socket sends an `<iq xmlns="usync">` stanza and parses the response per prot
 ## Usage
 
 ```js
-const { USyncQuery, USyncUser } = require('baron-baileys-v2/src/WAUSync')
+const { USyncQuery, USyncUser } = require('baron-baileys-v2/lib/WAUSync')
 
 // Build a query
 const query = new USyncQuery()
@@ -275,7 +275,7 @@ userDelete.sidelistDelete = true
 Multiple protocols in one round trip:
 
 ```js
-const { USyncQuery, USyncUser } = require('baron-baileys-v2/src/WAUSync')
+const { USyncQuery, USyncUser } = require('baron-baileys-v2/lib/WAUSync')
 
 const jids = ['491234567890@s.whatsapp.net', '441234567890@s.whatsapp.net', '19146088152@s.whatsapp.net']
 

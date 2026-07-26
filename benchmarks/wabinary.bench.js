@@ -6,13 +6,13 @@
  * Run: node benchmarks/wabinary.bench.js
  */
 
-const { jidEncode, jidDecode, jidNormalizedUser, areJidsSameUser } = require('../src/WABinary/jid-utils')
+const { jidEncode, jidDecode, jidNormalizedUser, areJidsSameUser } = require('../lib/WABinary/jid-utils')
 const {
 	getBinaryNodeChildren,
 	getBinaryNodeChild,
 	getAllBinaryNodeChildren,
 	getBinaryNodeChildString
-} = require('../src/WABinary/generic-utils')
+} = require('../lib/WABinary/generic-utils')
 
 function bench(label, iterations, fn) {
 	for (let i = 0; i < Math.min(500, Math.floor(iterations / 10)); i++) fn(i)

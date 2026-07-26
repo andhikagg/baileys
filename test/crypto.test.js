@@ -15,7 +15,7 @@ const {
 	hmacSign,
 	sha256,
 	derivePairingCodeKey
-} = require('../src/Utils/crypto')
+} = require('../lib/Utils/crypto')
 
 const KEY32 = crypto.randomBytes(32)
 const IV16 = crypto.randomBytes(16)

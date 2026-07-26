@@ -25,7 +25,7 @@ const {
 	PSA_WID,
 	STORIES_JID,
 	META_AI_JID,
-} = require('../src/WABinary/jid-utils')
+} = require('../lib/WABinary/jid-utils')
 
 describe('constants', () => {
 	test('S_WHATSAPP_NET', () => expect(S_WHATSAPP_NET).toBe('@s.whatsapp.net'))

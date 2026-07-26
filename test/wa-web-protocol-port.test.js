@@ -5,8 +5,8 @@
 // Utils chain can't be required under jest, so — following test/calls.test.js —
 // those builders are asserted as wire-shape locks. Pure units are tested for real.
 
-const { USyncFeatureProtocol, USYNC_FEATURES } = require('../src/WAUSync/Protocols/USyncFeatureProtocol')
-const { getBinaryNodeChild, getBinaryNodeChildString, S_WHATSAPP_NET } = require('../src/WABinary')
+const { USyncFeatureProtocol, USYNC_FEATURES } = require('../lib/WAUSync/Protocols/USyncFeatureProtocol')
+const { getBinaryNodeChild, getBinaryNodeChildString, S_WHATSAPP_NET } = require('../lib/WABinary')
 
 // ── USyncFeatureProtocol (real unit) ──────────────────────────────────────────
 

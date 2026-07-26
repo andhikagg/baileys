@@ -1,4 +1,4 @@
-# Communities & AI Groups (`src/Socket/communities.js`, `src/Socket/aigroups.js`)
+# Communities & AI Groups (`lib/Socket/communities.js`, `lib/Socket/aigroups.js`)
 
 ---
 

@@ -4,7 +4,7 @@
 // Source: BroadcastListQuotaProtocol.java — IQ xmlns="w:biz", <broadcast_list_quota/>
 // We test stanza builder and response parser independently.
 
-const { S_WHATSAPP_NET, getBinaryNodeChild } = require('../src/WABinary')
+const { S_WHATSAPP_NET, getBinaryNodeChild } = require('../lib/WABinary')
 
 // ── stanza builder ────────────────────────────────────────────────────────────
 

@@ -1,4 +1,4 @@
-# Registration, Passkeys & Account Management (`src/Socket/registration.js`)
+# Registration, Passkeys & Account Management (`lib/Socket/registration.js`)
 
 Covers MEX operations for passwords, passkeys, contacts, age verification, Imagine Me, account operations, data bundles, and companion devices.
 

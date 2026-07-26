@@ -9,7 +9,7 @@
  * No network, no WS — pure in-process logic.
  */
 
-const { RateLimiter, WarmUp, AntiBan, ContentVariator, resolveConfig } = require('../src/antiban')
+const { RateLimiter, WarmUp, AntiBan, ContentVariator, resolveConfig } = require('../lib/antiban')
 
 function bench(label, iterations, fn) {
 	// warmup

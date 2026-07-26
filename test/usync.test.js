@@ -3,7 +3,7 @@
 // Tests for USyncQuery builder and all 11 protocol parsers.
 // No real WS connection needed — we test the builder chain and parsers directly.
 
-const { USyncQuery, USyncUser } = require('../src/WAUSync')
+const { USyncQuery, USyncUser } = require('../lib/WAUSync')
 
 // ── USyncUser builder ─────────────────────────────────────────────────────────
 
@@ -276,7 +276,7 @@ describe('USyncQuery.parseUSyncQueryResult', () => {
 // ── Individual protocol parsers ───────────────────────────────────────────────
 
 describe('USyncDeviceProtocol parser', () => {
-	const { USyncDeviceProtocol } = require('../src/WAUSync/Protocols/USyncDeviceProtocol')
+	const { USyncDeviceProtocol } = require('../lib/WAUSync/Protocols/USyncDeviceProtocol')
 
 	test('parses device list with keyIndex', () => {
 		const p = new USyncDeviceProtocol()
@@ -311,7 +311,7 @@ describe('USyncDeviceProtocol parser', () => {
 })
 
 describe('USyncPictureProtocol parser', () => {
-	const { USyncPictureProtocol } = require('../src/WAUSync/Protocols/USyncPictureProtocol')
+	const { USyncPictureProtocol } = require('../lib/WAUSync/Protocols/USyncPictureProtocol')
 
 	test('name is "picture"', () => {
 		expect(new USyncPictureProtocol().name).toBe('picture')
@@ -336,7 +336,7 @@ describe('USyncPictureProtocol parser', () => {
 })
 
 describe('USyncTextStatusProtocol', () => {
-	const { USyncTextStatusProtocol } = require('../src/WAUSync/Protocols/USyncTextStatusProtocol')
+	const { USyncTextStatusProtocol } = require('../lib/WAUSync/Protocols/USyncTextStatusProtocol')
 
 	test('name is "text_status"', () => {
 		expect(new USyncTextStatusProtocol().name).toBe('text_status')
@@ -344,7 +344,7 @@ describe('USyncTextStatusProtocol', () => {
 })
 
 describe('USyncBusinessProtocol', () => {
-	const { USyncBusinessProtocol } = require('../src/WAUSync/Protocols/USyncBusinessProtocol')
+	const { USyncBusinessProtocol } = require('../lib/WAUSync/Protocols/USyncBusinessProtocol')
 
 	test('name is "business"', () => {
 		expect(new USyncBusinessProtocol().name).toBe('business')
@@ -362,7 +362,7 @@ describe('USyncBusinessProtocol', () => {
 })
 
 describe('USyncSidelistProtocol', () => {
-	const { USyncSidelistProtocol } = require('../src/WAUSync/Protocols/USyncSidelistProtocol')
+	const { USyncSidelistProtocol } = require('../lib/WAUSync/Protocols/USyncSidelistProtocol')
 
 	test('name is "sidelist"', () => {
 		expect(new USyncSidelistProtocol().name).toBe('sidelist')

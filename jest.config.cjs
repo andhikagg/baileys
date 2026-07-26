@@ -9,7 +9,7 @@ module.exports = {
 	testTimeout: 15000,
 	verbose: true,
 	coverageDirectory: 'coverage',
-	collectCoverageFrom: ['src/**/*.js', '!src/**/*.d.js'],
+	collectCoverageFrom: ['lib/**/*.js', '!lib/**/*.d.js'],
 	coverageThreshold: {
 		global: {
 			lines: 30

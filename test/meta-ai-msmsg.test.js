@@ -2,7 +2,7 @@
 
 const { proto } = require('../WAProto')
 const { privateChatFixture, normalGroupFixture, metaAiGroupFixture } = require('./fixtures/meta-ai-msmsg-fixtures')
-const { decryptMsmsgBotMessage, decodeDecryptedMsmsgMessage } = require('../src/Utils/meta-ai-msmsg')
+const { decryptMsmsgBotMessage, decodeDecryptedMsmsgMessage } = require('../lib/Utils/meta-ai-msmsg')
 
 const msMsgFromHex = ({ encIvHex, encPayloadHex }) => ({
 	version: 1,
@@ -91,13 +91,13 @@ describe('meta-ai msmsg decryption', () => {
 		})
 
 		jest.resetModules()
-		jest.doMock('../src/Utils/generics', () => ({
+		jest.doMock('../lib/Utils/generics', () => ({
 			unpadRandomMax16: value => value
 		}))
-		jest.doMock('../src/Utils/messages', () => ({
+		jest.doMock('../lib/Utils/messages', () => ({
 			getDevice: jest.fn().mockReturnValue(undefined)
 		}))
-		jest.doMock('../src/Utils/meta-ai-msmsg', () => ({
+		jest.doMock('../lib/Utils/meta-ai-msmsg', () => ({
 			decryptMsmsgBotMessage,
 			decodeDecryptedMsmsgMessage
 		}))
@@ -105,7 +105,7 @@ describe('meta-ai msmsg decryption', () => {
 		let decryptMessageNode
 		let setBotMessageSecret
 		jest.isolateModules(() => {
-			;({ decryptMessageNode, setBotMessageSecret } = require('../src/Utils/decode-wa-message'))
+			;({ decryptMessageNode, setBotMessageSecret } = require('../lib/Utils/decode-wa-message'))
 		})
 
 		setBotMessageSecret(
@@ -184,7 +184,7 @@ describe('meta-ai msmsg decryption', () => {
 		expect(decodeDecryptedMsmsgMessage).toHaveBeenCalledWith(Buffer.from('decrypted-msmsg'))
 		expect(decoded.fullMessage.message.protocolMessage.editedMessage.extendedTextMessage.text).toBe('delegated ok')
 
-		jest.dontMock('../src/Utils/meta-ai-msmsg')
+		jest.dontMock('../lib/Utils/meta-ai-msmsg')
 		jest.resetModules()
 	})
 

@@ -3,7 +3,7 @@
 const {
 	normalizeMessageForDisplayJids,
 	normalizeMentionedJidsForSend
-} = require('../src/Utils/jid-display-normalization')
+} = require('../lib/Utils/jid-display-normalization')
 
 const noopLogger = { debug: () => {}, warn: () => {} }
 const noopRepo = {}

@@ -1,7 +1,7 @@
 'use strict'
 const zlib = require('zlib')
 const { proto } = require('../WAProto/index.js')
-const { decodeGroupHistory, processGroupHistory } = require('../src/Utils/group-history')
+const { decodeGroupHistory, processGroupHistory } = require('../lib/Utils/group-history')
 
 const sampleGroupHistory = {
 	messages: [{ key: { id: 'M1', remoteJid: 'g@g.us' } }],

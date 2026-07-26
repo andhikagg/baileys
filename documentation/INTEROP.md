@@ -302,7 +302,7 @@ await sock.optOutIntegrators() // disable all
 ## isInteropUser — Check a JID
 
 ```js
-const { isInteropUser } = require('./src/WABinary')
+const { isInteropUser } = require('./lib/WABinary')
 
 isInteropUser('12-105012705411308@interop') // true
 isInteropUser('491234567890@s.whatsapp.net') // false
@@ -315,7 +315,7 @@ isInteropUser('491234567890@s.whatsapp.net') // false
 ```js
 const makeWASocket = require('./src').default
 const { useMultiFileAuthState } = require('./src')
-const { isInteropUser } = require('./src/WABinary')
+const { isInteropUser } = require('./lib/WABinary')
 
 async function main() {
 	const { state, saveCreds } = await useMultiFileAuthState('./auth')
